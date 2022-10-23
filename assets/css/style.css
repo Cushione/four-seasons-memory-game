@@ -12,6 +12,21 @@ body {
     margin: 0 auto;
 }
 
+.hidden {
+    display: none!important;
+}
+
+button {
+    background: none;
+    font-size: 1.75rem;
+    font-family: 'Sniglet', sans-serif;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 6px;
+    border: 3px solid;
+    cursor: pointer;
+}
+
 #menu-container {
     text-align: center;
     display: flex;
@@ -30,19 +45,8 @@ body {
     font-weight: normal;
 }
 
-#menu-buttons {
+#menu-buttons, #theme-buttons {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-}
-
-#menu-buttons button {
-    background: none;
-    font-size: 1.75rem;
-    font-family: 'Sniglet', sans-serif;
-    padding: 0.5em 1em;
-    margin: 0.5em;
-    border-radius: 6px;
-    border: 3px solid;
-    cursor: pointer;
 }

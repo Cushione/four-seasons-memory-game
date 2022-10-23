@@ -16,12 +16,19 @@
             <h2>Memory Game</h2>
         </div>
         <div id="menu-buttons">
-            <button>New Game</button>
+            <button onclick="selectTheme()">New Game</button>
             <button>How to play</button>
             <button>Settings</button>
         </div>
+        <div id="theme-buttons" class="hidden">
+            <button onclick="newGame()">Spring</button>
+            <button onclick="newGame()">Summer</button>
+            <button onclick="newGame()">Autumn</button>
+            <button onclick="newGame()">Winter</button>
+        </div>
     </div>
-
+    <div class="container hidden" id="game-container">
+    </div>
     <script src="assets/js/main.js"></script>
 </body>
 
