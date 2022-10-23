@@ -92,4 +92,7 @@ button {
 
 .card-back {
     transform: rotateY(180deg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
 }

@@ -1,12 +1,13 @@
 let cardValues = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10]
 let openCardIndex = -1
 let cardsToClose = []
+let selectedSeason = ''
 
 document.getElementById('game-container').addEventListener('click', handleClick);
 
 function handleClick(event) {
-    
-    if(cardsToClose.length) {
+
+    if (cardsToClose.length) {
         closeOpenCards()
     }
 
@@ -40,11 +41,11 @@ function handleClick(event) {
             openCard.classList.add("matched")
             clickedCard.classList.add("matched")
         } else {
-            console.log("No match! :(") 
-            cardsToClose = [clickedCard, openCard] 
+            console.log("No match! :(")
+            cardsToClose = [clickedCard, openCard]
             setTimeout(function () {
                 closeOpenCards()
-            }, 2000)
+            }, 1500)
 
         }
         openCardIndex = -1
@@ -62,9 +63,11 @@ function closeOpenCards() {
 function flipCard(card, value) {
     if (card.classList.contains("flipped")) {
         card.classList.remove("flipped")
-        card.children[0].children[1].innerHTML = ""
+        setTimeout(function () {
+            card.children[0].children[1].style.setProperty('background-image', 'none')
+        }, 1000)
     } else {
-        card.children[0].children[1].innerHTML = value
+        card.children[0].children[1].style.setProperty('background-image', `url(/assets/images/themes/${selectedSeason}/${value}.png)`)
         card.classList.add("flipped")
     }
 }
@@ -86,19 +89,16 @@ function hide(id) {
     document.getElementById(id).classList.add("hidden");
 }
 
-function newGame() {
+function newGame(season) {
+    selectedSeason = season
     shuffleCards()
     console.log(cardValues);
     hide("menu-container");
     for (let i = 0; i < 20; i++) {
         document.getElementById("game-container").innerHTML += `<div class="card">
         <div class="card-inner">
-            <div class="card-front">
-                <p>card front</p>
-            </div>
-            <div class="card-back">
-                <p>card back</p>
-            </div>
+            <div class="card-front"></div>
+            <div class="card-back"></div>
         </div>
     </div>`
     }
