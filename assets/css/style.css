@@ -75,7 +75,7 @@ button {
     transform-style: preserve-3d;
 }
 
-.card-inner.flip {
+.card.flipped .card-inner {
     transform: rotateY(180deg);
 }
 

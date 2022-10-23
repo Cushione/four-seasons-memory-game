@@ -1,37 +1,71 @@
-let cardValues = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10]
-let openCardValue = 0
+let cardValues = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10]
+let openCardIndex = -1
+let cardsToClose = []
 
 document.getElementById('game-container').addEventListener('click', handleClick);
 
 function handleClick(event) {
     
+    if(cardsToClose.length) {
+        closeOpenCards()
+    }
+
     let cards = Array.from(this.children);
     let clickedCard = event.target.parentElement.parentElement;
+
+    if (!clickedCard.classList.contains("card") || clickedCard.classList.contains("matched")) {
+        console.log("not a card or already matched")
+        return
+    }
+
     let index = cards.indexOf(clickedCard);
     console.log(index, cardValues[index]);
+
+    if (openCardIndex !== -1 && openCardIndex === index) {
+        console.log("same card")
+        return
+    }
+
     let currentCardValue = cardValues[index];
+    flipCard(clickedCard, currentCardValue)
 
 
-    if (openCardValue === 0) {
-        openCardValue = currentCardValue
+    if (openCardIndex === -1) {
+        openCardIndex = index
     } else {
+        let openCardValue = cardValues[openCardIndex]
+        let openCard = cards[openCardIndex]
         if (openCardValue === currentCardValue) {
             console.log("Match found! YAY")
+            openCard.classList.add("matched")
+            clickedCard.classList.add("matched")
         } else {
-            console.log("No match! :(")
+            console.log("No match! :(") 
+            cardsToClose = [clickedCard, openCard] 
+            setTimeout(function () {
+                closeOpenCards()
+            }, 2000)
+
         }
-        openCardValue = 0
+        openCardIndex = -1
 
     }
 }
 
-//temporary funtion for testing cards
-function flipCard(event) {
-    console.log(event.target.parentElement.classList)
-    if (event.target.parentElement.classList.contains("flip")) {
-        event.target.parentElement.classList.remove("flip")
+function closeOpenCards() {
+    for (let card of cardsToClose) {
+        flipCard(card)
+    }
+    cardsToClose = []
+}
+
+function flipCard(card, value) {
+    if (card.classList.contains("flipped")) {
+        card.classList.remove("flipped")
+        card.children[0].children[1].innerHTML = ""
     } else {
-        event.target.parentElement.classList.add("flip")
+        card.children[0].children[1].innerHTML = value
+        card.classList.add("flipped")
     }
 }
 
@@ -49,15 +83,15 @@ function show(id) {
 }
 
 function hide(id) {
-    document.getElementById(id).classList.add("hidden"); 
+    document.getElementById(id).classList.add("hidden");
 }
 
 function newGame() {
-    shuffleCards() 
+    shuffleCards()
     console.log(cardValues);
     hide("menu-container");
-    for (let i = 0; i<20; i++) {
-        document.getElementById("game-container").innerHTML+=`<div class="card">
+    for (let i = 0; i < 20; i++) {
+        document.getElementById("game-container").innerHTML += `<div class="card">
         <div class="card-inner">
             <div class="card-front">
                 <p>card front</p>
@@ -75,4 +109,3 @@ function selectTheme() {
     hide("menu-buttons");
     show("theme-buttons");
 }
-
