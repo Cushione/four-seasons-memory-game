@@ -93,6 +93,7 @@ function newGame(season) {
     selectedSeason = season
     shuffleCards()
     console.log(cardValues);
+    document.getElementById('game-container').classList.add(season)
     hide("menu-container");
     for (let i = 0; i < 20; i++) {
         document.getElementById("game-container").innerHTML += `<div class="card">
