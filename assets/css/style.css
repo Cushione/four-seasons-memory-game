@@ -45,8 +45,51 @@ button {
     font-weight: normal;
 }
 
-#menu-buttons, #theme-buttons {
+#menu-buttons, 
+#theme-buttons {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 100vmin;
+
+}
+
+.card {
+    background-color: transparent;
+    aspect-ratio: 1;
+    perspective: 1000;
+    padding: 4%;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-inner.flip {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #232323;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+}
+
+.card-back {
+    transform: rotateY(180deg);
 }
