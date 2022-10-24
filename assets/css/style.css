@@ -17,7 +17,7 @@ body {
 }
 
 .hidden {
-    display: none!important;
+    display: none !important;
 }
 
 button {
@@ -49,7 +49,7 @@ button {
     font-weight: normal;
 }
 
-#menu-buttons, 
+#menu-buttons,
 #theme-buttons {
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ button {
 
 #game-container {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     width: 100vmin;
 
 }
@@ -96,8 +96,23 @@ button {
 }
 
 .spring .card-front {
-    background:  rgb(238 192 198 / 60%);
-    background: linear-gradient(315deg, rgb(229 140 138 / 50%) 0%, rgb(238 192 198 / 60%) 61%);
+    background: rgb(238 192 198 / 60%);
+    background: linear-gradient(315deg, rgb(229 140 138 / 50%) 0%, rgb(238 192 198 / 60%) 100%);
+}
+
+.summer .card-front {
+    background: rgba(150 228 223 / 55%);
+    background: linear-gradient(315deg, rgba(77 204 198 / 60%) 0%, rgba(150 228 223 / 55%) 100%);
+}
+
+.autumn .card-front {
+    background: rgba(245 56 3 / 45%);
+    background: linear-gradient(315deg, rgba(245 56 3 / 45%) 0%, rgba(245 208 32 / 50%) 100%);
+}
+
+.winter .card-front {
+    background: rgb(245 227 230 / 100%);
+    background: linear-gradient(315deg, rgba(245 227 230 / 100%) 0%, rgba(217 228 245 / 100%) 100%);
 }
 
 .card-back {
@@ -108,5 +123,17 @@ button {
 }
 
 .spring .card-back {
-    border: 1px solid rgb(238 192 198 / 100%)
+    border: 1px solid rgb(238 192 198)
+}
+
+.summer .card-back {
+    border: 1px solid rgb(150 228 223)
+}
+
+.autumn .card-back {
+    border: 1px solid rgb(245 208 32)
+}
+
+.winter .card-back {
+    border: 1px solid rgb(217 228 245)
 }
