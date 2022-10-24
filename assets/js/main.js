@@ -6,9 +6,8 @@ let selectedSeason = ''
 document.getElementById('game-container').addEventListener('click', handleClick);
 
 function handleClick(event) {
-
     if (cardsToClose.length) {
-        closeOpenCards()
+        return
     }
 
     let cards = Array.from(this.children);
@@ -45,7 +44,7 @@ function handleClick(event) {
             cardsToClose = [clickedCard, openCard]
             setTimeout(function () {
                 closeOpenCards()
-            }, 1500)
+            }, 1300)
 
         }
         openCardIndex = -1
@@ -64,7 +63,9 @@ function flipCard(card, value) {
     if (card.classList.contains("flipped")) {
         card.classList.remove("flipped")
         setTimeout(function () {
-            card.children[0].children[1].style.setProperty('background-image', 'none')
+            if (!card.classList.contains("flipped")) {
+                card.children[0].children[1].style.setProperty('background-image', 'none')
+            }
         }, 1000)
     } else {
         card.children[0].children[1].style.setProperty('background-image', `url(/assets/images/themes/${selectedSeason}/${value}.png)`)
