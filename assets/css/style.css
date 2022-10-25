@@ -59,7 +59,8 @@ button {
 #game-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 100vmin;
+    width: 98vmin;
+    padding: 1vmin;
 }
 
 @media (orientation: landscape) {
