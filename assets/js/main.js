@@ -4,7 +4,8 @@ let cardsToClose = []
 let selectedSeason = ''
 let time = 0
 let timer 
-let score = 0
+let moves = 0
+let matches = 0
  
 document.getElementById('game-board').addEventListener('click', handleClick);
 
@@ -38,12 +39,16 @@ function handleClick(event) {
     } else {
         let openCardValue = cardValues[openCardIndex]
         let openCard = cards[openCardIndex]
+        document.getElementById("game-moves").innerHTML = `${++moves}`
+
         if (openCardValue === currentCardValue) {
             console.log("Match found! YAY")
             openCard.classList.add("matched")
             clickedCard.classList.add("matched")
-            document.getElementById("game-score").innerHTML = `${++score}/10`
-            if (score === 10) {
+            if (++matches === 10) {
+                document.getElementById("final-moves").innerHTML = moves
+                document.getElementById("final-time").innerHTML = time
+                document.getElementById("game-result").classList.remove("hidden")
                 clearInterval(timer)
             }
         } else {
@@ -111,10 +116,10 @@ function newGame(season) {
         </div>
     </div>`
     }
-    document.getElementById("game-score").innerHTML = "0/10"
+    document.getElementById("game-moves").innerHTML = "0"
     show("game-container");
     timer = setInterval(() => {
-        document.getElementById("game-timer").innerHTML = time++
+        document.getElementById("game-timer").innerHTML = ++time
     }, 1000);
 }
 
