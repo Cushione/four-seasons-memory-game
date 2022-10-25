@@ -57,14 +57,24 @@ button {
 }
 
 #game-container {
+    padding: 0 2vmin;
+
+}
+
+#game-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#game-board {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 98vmin;
-    padding: 1vmin;
+    width: 96vmin;
+    gap: 2vmin;
 }
 
 @media (orientation: landscape) {
-    #game-container {
+    #game-board {
         grid-template-columns: repeat(5, 1fr);
     }
 }
@@ -74,7 +84,6 @@ button {
     background-color: transparent;
     aspect-ratio: 1;
     perspective: 1000;
-    padding: 4%;
 }
 
 .card-inner {
