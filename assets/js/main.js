@@ -68,7 +68,7 @@ function flipCard(card, value) {
             }
         }, 1000)
     } else {
-        card.children[0].children[1].style.setProperty('background-image', `url(/assets/images/themes/${selectedSeason}/${value}.png)`)
+        card.children[0].children[1].style.setProperty('background-image', `url(assets/images/themes/${selectedSeason}/${value}.png)`)
         card.classList.add("flipped")
     }
 }
