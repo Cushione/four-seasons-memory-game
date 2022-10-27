@@ -163,3 +163,15 @@ function changeMenu(menuId) {
         }
     }
 }
+
+function confirmQuit() {
+    show("quit-confirm")
+}
+
+function quitGame() {
+    changeMenu(MENU.MAIN)
+    clearInterval(timer)
+    hide("quit-confirm")
+    hide("game-container")
+    show("menu-container")
+}

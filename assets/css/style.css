@@ -91,6 +91,34 @@ button:hover {
     padding-right: 6px;
 }
 
+#quit-button {
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    background: white;
+}
+
+#quit-confirm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3%;
+    background-color: white;
+    border-radius: 4%;
+    font-size: 24px;
+}
+
+#quit-confirm div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#quit-confirm button {
+    font-size: 1em;
+}
+
 #game-board {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -136,25 +164,29 @@ button:hover {
 }
 
 .spring .card-front,
-.spring-button {
+.spring-button,
+.spring #quit-confirm button {
     background: rgb(238 192 198 / 60%);
     background: linear-gradient(315deg, rgb(229 140 138 / 50%) 0%, rgb(238 192 198 / 60%) 100%);
 }
 
 .summer .card-front,
-.summer-button {
+.summer-button,
+.summer #quit-confirm button {
     background: rgba(150 228 223 / 55%);
     background: linear-gradient(315deg, rgba(77 204 198 / 60%) 0%, rgba(150 228 223 / 55%) 100%);
 }
 
 .autumn .card-front,
-.autumn-button {
+.autumn-button,
+.autumn #quit-confirm button {
     background: rgba(245 56 3 / 45%);
     background: linear-gradient(315deg, rgba(245 56 3 / 45%) 0%, rgba(245 208 32 / 50%) 100%);
 }
 
 .winter .card-front,
-.winter-button {
+.winter-button,
+.winter #quit-confirm button {
     background: rgb(245 227 230 / 100%);
     background: linear-gradient(315deg, rgba(245 227 230 / 100%) 0%, rgba(217 228 245 / 100%) 100%);
 }

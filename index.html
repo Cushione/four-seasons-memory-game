@@ -29,7 +29,7 @@
                 <button class="winter-button" onclick="newGame('winter')">Winter</button>
             </div>
             <button onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
-        </div> 
+        </div>
         <div id="game-result" class="hidden">
             <h3>Well Done!</h3>
             <p><i class="fa-solid fa-stopwatch"></i><span id="final-time"></span></p>
@@ -39,11 +39,19 @@
         </div>
     </div>
     <div class="container hidden" id="game-container">
+        <button id="quit-button" onclick="confirmQuit()"><i class="fa-solid fa-left-long"></i></button>
         <div id="game-header">
             <p><i class="fa-solid fa-stopwatch"></i><span id="game-timer">0</span></p>
             <p><i class="fa-solid fa-circle-right"></i><span id="game-moves">0</span></p>
         </div>
         <div id="game-board"></div>
+        <div id="quit-confirm" class="hidden">
+            <p>Are you sure you want to leave this game?</p>
+            <div>
+                <button onclick="quitGame()">Yes</button>
+                <button onclick="hide('quit-confirm')">No</button>
+            </div>
+        </div>
     </div>
     <script src="assets/js/main.js"></script>
 </body>
