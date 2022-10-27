@@ -3,10 +3,16 @@ let openCardIndex = -1
 let cardsToClose = []
 let selectedSeason = ''
 let time = 0
-let timer 
+let timer
 let moves = 0
 let matches = 0
- 
+
+const MENU = {
+    MAIN: "menu-buttons",
+    THEME: "theme-buttons",
+    RESULT: "game-result"
+}
+
 document.getElementById('game-board').addEventListener('click', handleClick);
 
 function handleClick(event) {
@@ -124,6 +130,18 @@ function newGame(season) {
 }
 
 function selectTheme() {
-    hide("menu-buttons");
-    show("theme-buttons");
+    changeMenu(MENU.THEME);
+}
+
+function changeMenu(menuId) {
+    let menuElements = document.getElementById("menu-container").children
+    for (let element of menuElements) {
+        if (element.id === "game-name") {
+            continue
+        } else if (element.id === menuId) {
+            element.classList.remove("hidden")
+        } else {
+            element.classList.add("hidden")
+        }
+    }
 }
