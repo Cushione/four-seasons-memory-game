@@ -27,6 +27,13 @@
             <button onclick="newGame('autumn')">Autumn</button>
             <button onclick="newGame('winter')">Winter</button>
         </div>
+        <div id="game-result" class="hidden">
+            <h3>Well Done!</h3>
+            <p><i class="fa-solid fa-stopwatch"></i><span id="final-time"></span></p>
+            <p><i class="fa-solid fa-circle-right"></i><span id="final-moves"></span></p>
+            <button onclick="selectTheme()">Play Again</button>
+            <button onclick="showMainMenu()">Main Menu</button>
+        </div>
     </div>
     <div class="container hidden" id="game-container">
         <div id="game-header">
@@ -34,10 +41,6 @@
             <p><i class="fa-solid fa-circle-right"></i><span id="game-moves">0</span></p>
         </div>
         <div id="game-board"></div>
-    </div>
-    <div id="game-result" class="hidden">
-        <h3>Well Done!</h3>
-        <p><span id="final-time"></span><span id="final-moves"></span></p>
     </div>
     <script src="assets/js/main.js"></script>
 </body>

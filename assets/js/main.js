@@ -54,8 +54,12 @@ function handleClick(event) {
             if (++matches === 10) {
                 document.getElementById("final-moves").innerHTML = moves
                 document.getElementById("final-time").innerHTML = time
-                document.getElementById("game-result").classList.remove("hidden")
                 clearInterval(timer)
+                changeMenu(MENU.RESULT)
+                setTimeout(function(){
+                    show("menu-container")
+                hide("game-container")  
+                }, 2000)
             }
         } else {
             console.log("No match! :(")
@@ -131,6 +135,10 @@ function newGame(season) {
 
 function selectTheme() {
     changeMenu(MENU.THEME);
+}
+
+function showMainMenu() {
+    changeMenu(MENU.MAIN)
 }
 
 function changeMenu(menuId) {

@@ -164,10 +164,13 @@ button {
 }
 
 #game-result {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 5%;
-    background-color: white;
+    font-size: 1.7rem;
+}
+
+#game-result h3 {
+    margin-top: 0;
+}
+
+#game-result i {
+    padding-right: 6px;
 }
