@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Sniglet", sans-serif;
-    color: #232323;
+    color: #3d3d3d;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -27,8 +27,19 @@ button {
     padding: 0.5em 1em;
     margin: 0.5em;
     border-radius: 6px;
-    border: 3px solid;
+    border: none;
     cursor: pointer;
+    color: inherit;
+    background: rgb(200, 214, 229 / 60%);
+    background: linear-gradient(315deg, rgba(200 214 229 / 60%) 0%, rgba(138 233 179 / 60%) 100%);
+    box-shadow: rgba(60 64 67 / 30%) 0px 1px 2px 0px, rgba(60 64 67 / 15%) 0px 2px 6px 2px;
+    transition: scale 0.2s ease-out, filter 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+button:hover {
+    filter: brightness(1.05);
+    scale: 1.1;
+    box-shadow: rgb(60 64 67 / 30%) 0px 3px 2px 0px, rgb(60 64 67 / 15%) 0px 3px 6px 2px;
 }
 
 #menu-container {
@@ -50,11 +61,15 @@ button {
     font-weight: normal;
 }
 
-#menu-buttons,
-#theme-buttons {
+#menu-buttons {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+}
+
+#theme-buttons div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #game-container {
@@ -117,25 +132,29 @@ button {
     backface-visibility: hidden;
     box-sizing: border-box;
     border-radius: 4%;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(60 64 67 / 30%) 0px 1px 2px 0px, rgba(60 64 67 / 15%) 0px 2px 6px 2px;
 }
 
-.spring .card-front {
+.spring .card-front,
+.spring-button {
     background: rgb(238 192 198 / 60%);
     background: linear-gradient(315deg, rgb(229 140 138 / 50%) 0%, rgb(238 192 198 / 60%) 100%);
 }
 
-.summer .card-front {
+.summer .card-front,
+.summer-button {
     background: rgba(150 228 223 / 55%);
     background: linear-gradient(315deg, rgba(77 204 198 / 60%) 0%, rgba(150 228 223 / 55%) 100%);
 }
 
-.autumn .card-front {
+.autumn .card-front,
+.autumn-button {
     background: rgba(245 56 3 / 45%);
     background: linear-gradient(315deg, rgba(245 56 3 / 45%) 0%, rgba(245 208 32 / 50%) 100%);
 }
 
-.winter .card-front {
+.winter .card-front,
+.winter-button {
     background: rgb(245 227 230 / 100%);
     background: linear-gradient(315deg, rgba(245 227 230 / 100%) 0%, rgba(217 228 245 / 100%) 100%);
 }

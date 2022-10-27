@@ -22,11 +22,14 @@
             <button>Settings</button>
         </div>
         <div id="theme-buttons" class="hidden">
-            <button onclick="newGame('spring')">Spring</button>
-            <button onclick="newGame('summer')">Summer</button>
-            <button onclick="newGame('autumn')">Autumn</button>
-            <button onclick="newGame('winter')">Winter</button>
-        </div>
+            <div>
+                <button class="spring-button" onclick="newGame('spring')">Spring</button>
+                <button class="summer-button" onclick="newGame('summer')">Summer</button>
+                <button class="autumn-button" onclick="newGame('autumn')">Autumn</button>
+                <button class="winter-button" onclick="newGame('winter')">Winter</button>
+            </div>
+            <button onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
+        </div> 
         <div id="game-result" class="hidden">
             <h3>Well Done!</h3>
             <p><i class="fa-solid fa-stopwatch"></i><span id="final-time"></span></p>
