@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Sniglet&display=swap');
 
 body {
     margin: 0;
@@ -38,8 +38,9 @@ button {
 }
 
 #game-name h1 {
+    font-family: 'Lilita One', sans-serif;
+    margin: 0;
     font-size: 4rem;
-    margin-bottom: 0.2em;
     font-weight: normal;
 }
 
