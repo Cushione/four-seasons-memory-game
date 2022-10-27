@@ -67,6 +67,15 @@ button {
     justify-content: space-between;
 }
 
+#game-header p {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+#game-header p i {
+    padding-right: 6px;
+}
+
 #game-board {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
