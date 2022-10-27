@@ -56,9 +56,10 @@ function handleClick(event) {
                 document.getElementById("final-time").innerHTML = time
                 clearInterval(timer)
                 changeMenu(MENU.RESULT)
-                setTimeout(function(){
+                setTimeout(function () {
                     show("menu-container")
-                hide("game-container")  
+                    hide("game-container")
+                    document.getElementById("game-container").classList.remove(selectedSeason)
                 }, 2000)
             }
         } else {
@@ -114,20 +115,29 @@ function hide(id) {
 
 function newGame(season) {
     selectedSeason = season
-    shuffleCards()
-    console.log(cardValues);
+    resetGame()
     document.getElementById('game-container').classList.add(season)
     hide("menu-container");
+    let gameboard = document.getElementById("game-board")
+    gameboard.innerHTML = ""
     for (let i = 0; i < 20; i++) {
-        document.getElementById("game-board").innerHTML += `<div class="card">
+        gameboard.innerHTML += `<div class="card">
         <div class="card-inner">
             <div class="card-front"></div>
             <div class="card-back"></div>
         </div>
     </div>`
     }
-    document.getElementById("game-moves").innerHTML = "0"
     show("game-container");
+}
+
+function resetGame() {
+    shuffleCards()
+    moves = 0
+    time = 0
+    matches = 0
+    document.getElementById("game-moves").innerHTML = moves
+    document.getElementById("game-timer").innerHTML = time
     timer = setInterval(() => {
         document.getElementById("game-timer").innerHTML = ++time
     }, 1000);
