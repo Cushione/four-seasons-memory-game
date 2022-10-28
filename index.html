@@ -28,7 +28,7 @@
                 <button class="autumn-button" onclick="newGame('autumn')">Autumn</button>
                 <button class="winter-button" onclick="newGame('winter')">Winter</button>
             </div>
-            <button onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
+            <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
         </div>
         <div id="game-result" class="hidden">
             <h3>Well Done!</h3>
@@ -39,7 +39,8 @@
         </div>
     </div>
     <div class="container hidden" id="game-container">
-        <button id="quit-button" onclick="confirmQuit()"><i class="fa-solid fa-left-long"></i></button>
+        <button id="quit-button" class="secondary-button small-button" onclick="confirmQuit()"><i
+                class="fa-solid fa-left-long"></i></button>
         <div id="game-header">
             <p><i class="fa-solid fa-stopwatch"></i><span id="game-timer">0</span></p>
             <p><i class="fa-solid fa-circle-right"></i><span id="game-moves">0</span></p>
