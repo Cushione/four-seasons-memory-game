@@ -85,10 +85,32 @@ button:hover {
 
 @media only screen and (min-width: 375px) {
     #theme-buttons div {
-    grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         padding: 0;
     }    
 }
+
+#how-to-play > div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0% 10% 2%;
+}
+
+@media only screen and (min-width: 992px) {
+    #how-to-play > div {
+        flex-direction: row;
+    }
+}
+
+#how-to-play > div > div {
+    font-size: 18px;
+    padding: 0% 5%;
+}
+
+#how-to-play img {
+    width: 50%;
+    object-fit: contain;
 }
 
 #high-score-list {

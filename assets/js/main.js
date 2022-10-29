@@ -12,7 +12,8 @@ const MENU = {
     MAIN: "menu-buttons",
     THEME: "theme-buttons",
     HIGHSCORE: "high-score-menu",
-    RESULT: "game-result"
+    RESULT: "game-result",
+    HOWTOPLAY: "how-to-play"
 }
 
 document.getElementById('game-board').addEventListener('click', handleClick);
@@ -170,6 +171,10 @@ function resetGame() {
 
 function selectTheme() {
     changeMenu(MENU.THEME);
+}
+
+function showHowToPlay() {
+    changeMenu(MENU.HOWTOPLAY)
 }
 
 function showHighScoreList() {

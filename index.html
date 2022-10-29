@@ -18,7 +18,7 @@
         </div>
         <div id="menu-buttons">
             <button onclick="selectTheme()">New Game</button>
-            <button>How to Play</button>
+            <button onclick="showHowToPlay()">How to Play</button>
             <button onclick="showHighScoreList()">High Score</button>
         </div>
         <div id="theme-buttons" class="hidden">
@@ -27,6 +27,20 @@
                 <button class="summer-button" onclick="newGame('summer')">Summer</button>
                 <button class="autumn-button" onclick="newGame('autumn')">Autumn</button>
                 <button class="winter-button" onclick="newGame('winter')">Winter</button>
+            </div>
+            <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
+        </div>
+        <div id="how-to-play" class="hidden">
+            <div>
+                <div>
+                    <p>There are 20 cards with 10 pairs of unique pictures.</p>
+                    <p>The game starts with all the cards face down.</p>
+                    <p>With each move, you turn over two cards of your choice.</p>
+                    <p>If they have the same picture, it's a match and they stay open.
+                        Otherwise, the cards are turned face down again.</p>
+                    <p>The game ends when all the cards have been matched.</p>
+                </div>
+                <img src="assets/images/how-to-play.gif" alt="how to play animation">
             </div>
             <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
         </div>
