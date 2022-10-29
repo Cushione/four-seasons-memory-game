@@ -18,8 +18,8 @@
         </div>
         <div id="menu-buttons">
             <button onclick="selectTheme()">New Game</button>
-            <button>How to play</button>
-            <button>Settings</button>
+            <button>How to Play</button>
+            <button onclick="showHighScoreList()">High Score</button>
         </div>
         <div id="theme-buttons" class="hidden">
             <div>
@@ -30,6 +30,7 @@
             </div>
             <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
         </div>
+        <div id="high-score-menu"><ol id="high-score-list"></ol></div>
         <div id="game-result" class="hidden">
             <h3>Well Done!</h3>
             <p><i class="fa-solid fa-stopwatch"></i><span id="final-time"></span></p>

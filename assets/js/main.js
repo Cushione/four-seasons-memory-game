@@ -6,10 +6,12 @@ let time = 0
 let timer
 let moves = 0
 let matches = 0
+let highScoreList = JSON.parse(localStorage.getItem("highScore")) || [];
 
 const MENU = {
     MAIN: "menu-buttons",
     THEME: "theme-buttons",
+    HIGHSCORE: "high-score-menu",
     RESULT: "game-result"
 }
 
@@ -55,6 +57,7 @@ function handleClick(event) {
                 document.getElementById("final-moves").innerHTML = moves
                 document.getElementById("final-time").innerHTML = time
                 clearInterval(timer)
+                checkForHighScore()
                 changeMenu(MENU.RESULT)
                 setTimeout(function () {
                     show("menu-container")
@@ -73,6 +76,28 @@ function handleClick(event) {
         openCardIndex = -1
 
     }
+}
+
+function checkForHighScore() {
+    for (let i = 0; i < highScoreList.length; i++) {
+        if (highScoreList[i].time > time) {
+           addToHighScore(i)
+           return
+        } else if (highScoreList[i].time === time) {
+           if (highScoreList[i].moves > moves) {
+            addToHighScore(i)
+            return
+           }
+        }
+    } 
+    addToHighScore(highScoreList.length)
+}
+
+function addToHighScore(index) {
+    highScoreList.splice(index, 0, {time: time, moves: moves, season: selectedSeason})
+    highScoreList = highScoreList.slice(0, 5)
+    localStorage.setItem('highScore', JSON.stringify(highScoreList));
+    console.log(highScoreList, localStorage.getItem('highscore'))
 }
 
 function closeOpenCards() {
@@ -145,6 +170,19 @@ function resetGame() {
 
 function selectTheme() {
     changeMenu(MENU.THEME);
+}
+
+function showHighScoreList() {
+   let list = document.getElementById("high-score-list")
+   list.innerHTML = ""
+    for (let score of highScoreList) {
+        list.innerHTML += `<li class="${score.season}">
+        <p><i class="fa-solid fa-stopwatch"></i><span id="game-timer">${score.time}</span></p>
+        <p><i class="fa-solid fa-circle-right"></i><span id="game-moves">${score.moves}</span></p>
+        </li>`
+
+    }
+    changeMenu(MENU.HIGHSCORE)
 }
 
 function showMainMenu() {

@@ -36,6 +36,15 @@ button {
     transition: scale 0.2s ease-out, filter 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
+button.secondary-button {
+    background: white;
+}
+
+button.small-button {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
 button:hover {
     filter: brightness(1.05);
     scale: 1.1;
@@ -94,9 +103,6 @@ button:hover {
 #quit-button {
     position: absolute;
     top: 0;
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    background: white;
 }
 
 #quit-confirm {
@@ -165,28 +171,32 @@ button:hover {
 
 .spring .card-front,
 .spring-button,
-.spring #quit-confirm button {
+.spring #quit-confirm button,
+li.spring {
     background: rgb(238 192 198 / 60%);
     background: linear-gradient(315deg, rgb(229 140 138 / 50%) 0%, rgb(238 192 198 / 60%) 100%);
 }
 
 .summer .card-front,
 .summer-button,
-.summer #quit-confirm button {
+.summer #quit-confirm button,
+li.summer {
     background: rgba(150 228 223 / 55%);
     background: linear-gradient(315deg, rgba(77 204 198 / 60%) 0%, rgba(150 228 223 / 55%) 100%);
 }
 
 .autumn .card-front,
 .autumn-button,
-.autumn #quit-confirm button {
+.autumn #quit-confirm button,
+li.autumn {
     background: rgba(245 56 3 / 45%);
     background: linear-gradient(315deg, rgba(245 56 3 / 45%) 0%, rgba(245 208 32 / 50%) 100%);
 }
 
 .winter .card-front,
 .winter-button,
-.winter #quit-confirm button {
+.winter #quit-confirm button,
+li.winter {
     background: rgb(245 227 230 / 100%);
     background: linear-gradient(315deg, rgba(245 227 230 / 100%) 0%, rgba(217 228 245 / 100%) 100%);
 }
