@@ -81,6 +81,12 @@ button:hover {
     grid-template-columns: 1fr 1fr;
 }
 
+#high-score-list {
+    max-width: 350px;
+    margin: 0 auto;
+    padding-right: 20px;
+}
+
 #high-score-list li {
     margin-bottom: 1rem;
 }
