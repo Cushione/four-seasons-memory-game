@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Sniglet&display=swap');
 
+* {
+    font-family: "Sniglet", sans-serif;
+    font-size: 20px;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: "Sniglet", sans-serif;
     color: #3d3d3d;
     display: flex;
     flex-direction: column;
@@ -22,8 +26,7 @@ body {
 
 button {
     background: none;
-    font-size: 1.75rem;
-    font-family: 'Sniglet', sans-serif;
+    font-size: 1.4rem;
     padding: 0.5em 1em;
     margin: 0.5em;
     border-radius: 6px;
@@ -41,8 +44,8 @@ button.secondary-button {
 }
 
 button.small-button {
-    font-size: 1rem;
-    margin: 0.5rem 0;
+    font-size: 0.8rem;
+    margin: 8px 0;
 }
 
 button:hover {
@@ -60,13 +63,13 @@ button:hover {
 #game-name h1 {
     font-family: 'Lilita One', sans-serif;
     margin: 0;
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: normal;
     text-shadow: 0px 3px 2px rgba(60 64 67 / 30%), 0px 3px 6px rgba(60 64 67 / 15%);
 }
 
 #game-name h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 0.2em;
     font-weight: normal;
 }
@@ -98,7 +101,6 @@ button:hover {
 }
 
 #how-to-play>div>div {
-    font-size: 18px;
     padding: 0% 5%;
 }
 
@@ -126,7 +128,7 @@ button:hover {
 }
 
 #high-score-list li {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 #high-score-list li div {
@@ -317,7 +319,7 @@ li.winter div {
 }
 
 #game-result {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
 }
 
 #game-result h3 {
