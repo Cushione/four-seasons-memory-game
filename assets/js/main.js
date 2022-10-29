@@ -189,6 +189,9 @@ function showHighScoreList() {
         </li>`
 
     }
+    if (highScoreList.length === 0) {
+        list.outerHTML = `<p>There are no high scores yet.</p>`
+    }
     changeMenu(MENU.HIGHSCORE)
 }
 
