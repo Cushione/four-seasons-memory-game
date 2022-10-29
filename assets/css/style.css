@@ -30,8 +30,8 @@ button {
     border: none;
     cursor: pointer;
     color: inherit;
-    background: rgb(200, 214, 229 / 60%);
-    background: linear-gradient(315deg, rgba(200 214 229 / 60%) 0%, rgba(138 233 179 / 60%) 100%);
+    background: rgba(255 221 0 / 60%);
+    background: linear-gradient(315deg, rgba(255 221 0 / 60%) 0%, rgba(243 249 167 / 80%) 100%);
     box-shadow: rgba(60 64 67 / 30%) 0px 1px 2px 0px, rgba(60 64 67 / 15%) 0px 2px 6px 2px;
     transition: scale 0.2s ease-out, filter 0.2s ease-out, box-shadow 0.2s ease-out;
 }
@@ -48,7 +48,7 @@ button.small-button {
 button:hover {
     filter: brightness(1.05);
     scale: 1.1;
-    box-shadow: rgb(60 64 67 / 30%) 0px 3px 2px 0px, rgb(60 64 67 / 15%) 0px 3px 6px 2px;
+    box-shadow: rgba(60 64 67 / 30%) 0px 3px 2px 0px, rgba(60 64 67 / 15%) 0px 3px 6px 2px;
 }
 
 #menu-container {
@@ -62,6 +62,7 @@ button:hover {
     margin: 0;
     font-size: 4rem;
     font-weight: normal;
+    text-shadow: 0px 3px 2px rgba(60 64 67 / 30%), 0px 3px 6px rgba(60 64 67 / 15%);
 }
 
 #game-name h2 {
@@ -219,15 +220,15 @@ button:hover {
 .card-front:hover {
     filter: brightness(1.025);
     scale: 1.025;
-    box-shadow: rgb(60 64 67 / 30%) 0px 3px 2px 0px, rgb(60 64 67 / 15%) 0px 3px 6px 2px;
+    box-shadow: rgba(60 64 67 / 30%) 0px 3px 2px 0px, rgba(60 64 67 / 15%) 0px 3px 6px 2px;
 }
 
 .spring .card-front,
 .spring-button,
 .spring #quit-confirm button,
 li.spring div {
-    background: rgb(238 192 198 / 60%);
-    background: linear-gradient(315deg, rgb(229 140 138 / 50%) 0%, rgb(238 192 198 / 60%) 100%);
+    background: rgba(238 192 198 / 60%);
+    background: linear-gradient(315deg, rgba(229 140 138 / 50%) 0%, rgba(238 192 198 / 60%) 100%);
 }
 
 .summer .card-front,
@@ -250,7 +251,7 @@ li.autumn div {
 .winter-button,
 .winter #quit-confirm button,
 li.winter div {
-    background: rgb(245 227 230 / 100%);
+    background: rgba(245 227 230 / 100%);
     background: linear-gradient(315deg, rgba(245 227 230 / 100%) 0%, rgba(217 228 245 / 100%) 100%);
 }
 
