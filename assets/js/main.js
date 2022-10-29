@@ -82,20 +82,24 @@ function handleClick(event) {
 function checkForHighScore() {
     for (let i = 0; i < highScoreList.length; i++) {
         if (highScoreList[i].time > time) {
-           addToHighScore(i)
-           return
-        } else if (highScoreList[i].time === time) {
-           if (highScoreList[i].moves > moves) {
             addToHighScore(i)
             return
-           }
+        } else if (highScoreList[i].time === time) {
+            if (highScoreList[i].moves > moves) {
+                addToHighScore(i)
+                return
+            }
         }
-    } 
+    }
     addToHighScore(highScoreList.length)
 }
 
 function addToHighScore(index) {
-    highScoreList.splice(index, 0, {time: time, moves: moves, season: selectedSeason})
+    highScoreList.splice(index, 0, {
+        time: time,
+        moves: moves,
+        season: selectedSeason
+    })
     highScoreList = highScoreList.slice(0, 5)
     localStorage.setItem('highScore', JSON.stringify(highScoreList));
     console.log(highScoreList, localStorage.getItem('highscore'))
@@ -178,8 +182,8 @@ function showHowToPlay() {
 }
 
 function showHighScoreList() {
-   let list = document.getElementById("high-score-list")
-   list.innerHTML = ""
+    let list = document.getElementById("high-score-list")
+    list.innerHTML = ""
     for (let score of highScoreList) {
         list.innerHTML += `<li class="${score.season}">
         <div>
@@ -190,7 +194,9 @@ function showHighScoreList() {
 
     }
     if (highScoreList.length === 0) {
-        list.outerHTML = `<p>There are no high scores yet.</p>`
+        show("empty-high-score")
+    } else {
+        hide("empty-high-score")
     }
     changeMenu(MENU.HIGHSCORE)
 }
