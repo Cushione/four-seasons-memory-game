@@ -81,6 +81,41 @@ button:hover {
     grid-template-columns: 1fr 1fr;
 }
 
+#high-score-list li {
+    margin-bottom: 1rem;
+}
+
+#high-score-list li div {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 6px;
+    margin-left: 6px;
+    box-shadow: rgba(60 64 67 / 30%) 0px 1px 2px 0px, rgba(60 64 67 / 15%) 0px 2px 6px 2px;
+}
+
+#high-score-list li::marker {
+    font-size: 16px;
+}
+
+#high-score-list li:nth-child(1)::marker {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#high-score-list li:nth-child(2)::marker {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#high-score-list li:nth-child(3)::marker {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#high-score-list li:nth-child(4)::marker {
+    font-size: 20px;
+}
+
 #game-container {
     padding: 0 2vmin;
 
@@ -172,7 +207,7 @@ button:hover {
 .spring .card-front,
 .spring-button,
 .spring #quit-confirm button,
-li.spring {
+li.spring div {
     background: rgb(238 192 198 / 60%);
     background: linear-gradient(315deg, rgb(229 140 138 / 50%) 0%, rgb(238 192 198 / 60%) 100%);
 }
@@ -180,7 +215,7 @@ li.spring {
 .summer .card-front,
 .summer-button,
 .summer #quit-confirm button,
-li.summer {
+li.summer div {
     background: rgba(150 228 223 / 55%);
     background: linear-gradient(315deg, rgba(77 204 198 / 60%) 0%, rgba(150 228 223 / 55%) 100%);
 }
@@ -188,7 +223,7 @@ li.summer {
 .autumn .card-front,
 .autumn-button,
 .autumn #quit-confirm button,
-li.autumn {
+li.autumn div {
     background: rgba(245 56 3 / 45%);
     background: linear-gradient(315deg, rgba(245 56 3 / 45%) 0%, rgba(245 208 32 / 50%) 100%);
 }
@@ -196,7 +231,7 @@ li.autumn {
 .winter .card-front,
 .winter-button,
 .winter #quit-confirm button,
-li.winter {
+li.winter div {
     background: rgb(245 227 230 / 100%);
     background: linear-gradient(315deg, rgba(245 227 230 / 100%) 0%, rgba(217 228 245 / 100%) 100%);
 }

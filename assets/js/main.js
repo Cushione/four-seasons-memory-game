@@ -177,8 +177,10 @@ function showHighScoreList() {
    list.innerHTML = ""
     for (let score of highScoreList) {
         list.innerHTML += `<li class="${score.season}">
-        <p><i class="fa-solid fa-stopwatch"></i><span id="game-timer">${score.time}</span></p>
-        <p><i class="fa-solid fa-circle-right"></i><span id="game-moves">${score.moves}</span></p>
+        <div>
+        <p>Time: ${score.time} seconds</p>
+        <p>${score.moves} moves</p>
+        </div>
         </li>`
 
     }

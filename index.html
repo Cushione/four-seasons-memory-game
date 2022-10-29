@@ -30,7 +30,10 @@
             </div>
             <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
         </div>
-        <div id="high-score-menu"><ol id="high-score-list"></ol></div>
+        <div id="high-score-menu" class="hidden">
+            <ol id="high-score-list"></ol>
+            <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
+        </div>
         <div id="game-result" class="hidden">
             <h3>Well Done!</h3>
             <p><i class="fa-solid fa-stopwatch"></i><span id="final-time"></span></p>
