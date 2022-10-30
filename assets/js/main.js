@@ -195,6 +195,7 @@ function resetGame() {
     moves = 0
     time = 0
     matches = 0
+    openCardIndex = -1
     document.getElementById("game-moves").innerHTML = moves
     document.getElementById("game-timer").innerHTML = time
     // Start new timer
