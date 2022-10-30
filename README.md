@@ -1,108 +1,199 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Four Seasons Memory Game
 
-Welcome Cushione,
+Four Seasons is a relaxing memory game with changing seasons.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This website targets people of any age looking for an easy game without complex rules.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Four Seasons Memory Game shown on a range of devices](assets/docs/website-mockup.png)
 
-## Gitpod Reminders
+## Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [Features](#features)
+    * [Menu](#menu)
+      * [Game Name](#game-name)
+      * [Buttons](#buttons)
+    * [Main Menu](#main-menu)
+    * [How To Play](#how-to-play)
+    * [High Score](#high-score)
+    * [Theme Select](#theme-select)
+    * [Game](#game)
+      * [Game Screen](#game-screen)
+      * [Result Screen](#result-screen)
+      * [Leave Dialog](#leave-dialog)
+* [Responsive Design](#responsive-design)
+* [Wireframes](#wireframes)
+* [Design](#design)
+    * [Colors](#colors)
+    * [Typography](#typography)
+* [Testing](#testing)
+    * [Manual Testing](#manual-testing)
+    * [Validation](#validation)
+    * [Bugs](#bugs)
+* [Deployment](#deployment)
+    * [Development process](#development-process)
+* [Credits](#credits)
+* [Acknowledgments](#acknowledgments)
 
-`python3 -m http.server`
+## FEATURES
 
-A blue button should appear to click: _Make Public_,
+### Menu
+- The menu has a consistent layout that is easy to navigate. 
+- It consists of the main menu, theme selector, how-to-play, high scores, and end-of-game screens. 
+- At the bottom of each page, there is a go-back button allowing the user to navigate to the previous page. 
 
-Another blue button should appear to click: _Open Browser_.
+#### Game Name
+- The game name is the first element on all pages, excluding the game screen.
+- The name conveys the exact nature of the website, making it clear it is a memory game. 
+- The user can immediately expect a game revolving around four changing seasons. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Buttons 
+- All buttons have consistent styling, differing only in their background color.
+- Main buttons are colorful, and the secondary buttons have a white background. 
 
-A blue button should appear to click: _Make Public_,
+### Main Menu
+![Main Menu](assets/docs/features/main-menu.png)
+- The main menu is the starting point for a new user.
+- From the menu, the user can navigate to a new game, how to play page, or to the high scores.
 
-Another blue button should appear to click: _Open Browser_.
+### How To Play
+![How To Play](assets/docs/features/how-to-play.png)
+- The How To Play screen consists of a text explaining how to play the game.
+- The instructions are complimented by a simple animation showing individual steps. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### High Score
+![High Score](assets/docs/features/high-score.png)
+- The high score screen shows the five best scores of the user.
+- The scores are ordered by time and the number of moves needed to finish the game.
+- The background of each score is in the color of the season the game was played in.
 
-To log into the Heroku toolbelt CLI:
+### Theme Select
+![Theme Select](assets/docs/features/theme-select.png)
+- Before every game, the user can select a season for the game.
+- Each season has its unique set of cards with images and colors that match the season.
+- All buttons are fully responsive. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Game
+- The game consists of 10 pairs of cards, 20 cards in total.
+- The game starts with all the cards face down.
+- The user opens two cards of his choice.
+- If two cards match, they stay open. Otherwise, they close and the user can try again until all the cards have been matched. 
+- The game ends when all cards have been matched, revealing the final score. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### Game Screen
+![Game Screen](assets/docs/features/game-screen.gif)
+- The game screen presents the user with a game board, timer, and a move counter. 
+- In the top left corner, the user can find a back button that allows him to leave the game.
+- The game board consists of 20 square, evenly spaced cards. The back of the card carries the color of the chosen season.
+- The user can interact with the cards, as indicated by a gentle hover effect.
+- Upon clicking, each card flips over, revealing the image on the other side of the card.
 
-------
+#### Result Screen
+![Result Screen](assets/docs/features/result-screen.png)
+- The end-of-game screen congratulates the user on finishing the game successfully, evoking a pleasant feeling of achievement. 
+- It also shows the time and moves the user needed to finish the game.
+- At the bottom of the screen are two buttons, allowing the user to start a new game or go back to the main menu.
 
-## Release History
+#### Leave Dialog
+![Leave Dialog](assets/docs/features/leave-dialog.png)
+- The leave dialog confirms that the user wants to leave the current game to prevent accidental quitting of the game in progress. 
+- The colors of the leaving dialog are matching the current season for the continuous look.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Additional Features
+Features that could be implemented in the future:
+- Playing against the computer and other players
+- Optional background color for the game board
+- Music and sound effects
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Responsive Design
+- The entire page has a maximum width of 1140px to ensure a good user experience on larger screens.
+- The website uses media queries to optimize the available space on different screen sizes.
+- The layout utilizes Flexbox for responsiveness and a CSS grid for the game board.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Wireframes
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Wireframes were created for the mobile and desktop versions of the website with the Program [Balsamiq](https://balsamiq.com/).
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+[Image of the wireframes](assets/docs/wireframes.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Design
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Colors
+The website uses a wide range of pastel colors to recreate the feeling of four changing seasons. 
+- Spring has a light pink color that represents fresh, blooming flowers.
+- Summer has a turquoise blue color that evokes the feeling of bathing in the sea.
+- Autumn has a warm orange color that represents fallen leaves.
+- Winter has a white color with a hint of blue that represents fresh snow.
+- The main menu has a warm yellow color that represents the sun found in every season.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Typography
+- For the page name, the font "Lilita One" was used.
+- For the rest of the page, the font "Sniglet" was used.
+- The page uses a base font size of 20px for greater readability and accessibility for older audiences.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Testing
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Manual Testing
+- I have tested the desktop and mobile versions of the website with Chrome, Firefox, and Edge on a Windows Computer.
+- I have tested the mobile version with Chrome and Firefox on an android device.
+- I have tested the mobile version with Safari on an ios device.
+- I have shared the website with multiple users to confirm the website functionality on different devices and to get feedback on their experience.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Validation
+#### HTML
+![W3C HTML Validator](assets/docs/validators/w3c-html-validator.png)     
+There were no errors found on any page using the W3C HTML Validator.
+#### JS
+![JS Hint Validator](assets/docs/validators/js-hint-validator.png)  
+There were no errors found in the javascript using the JS Hint Validator.
+#### CSS
+![W3C CSS Validator](assets/docs/validators/w3c-css-validator.png)  
+There were no errors found in the stylesheet using the W3C CSS Validator.
+#### Lighthouse
+![Lighthouse Audit](assets/docs/validators/lighthouse-audit.png)   
+I used the Chrome Lighthouse tool and received optimal scores for performance, accessibility, best practices, and SEO.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Bugs
+#### Fixed Bugs
+- When opening the same card immediately after it has been closed, the image was not showing, revealing only a blank card. Fixed by adding a condition in the time out that removes the image after a card has been closed. This condition checks if the card has been opened again during the time out and, if applicable, skips removing the image. 
+- If the user quit a game with an odd number of cards left open, the unmatched card was carried over to a new game. When opening a card in the new game, it was matched against the index of the card from the previous game. If they did not match, the clicked card was closed immediately and the card at the index of the card from the previous game opened showing a blank card. Fixed by resetting the variable storing the index of the first card of a match between games.
+- In consecutive games, the timer was incremented in bigger steps. Fixed by clearing the interval that increments the timer every second in between games.  
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### Unfixed bugs
+There are no unfixed bugs.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Deployment
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The site was deployed using GitHub pages.
 
-------
+The steps to activate Github pages are as follows:
+- Navigate to the settings tab in the GitHub repository.
+- In the settings, navigate to the "Pages" tab on the left of the page.
+- In the "Build and deployment" section, select "Deploy from a branch" in the source dropdown.
+- Select the branch "main" and click on "Save".
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+The live link can be found here: [Four Seasons Memory Game](https://cushione.github.io/four-seasons-memory-game/)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Development process
 
-**How will this affect me?**
+- I started the program and repository by using the [gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template) provided by the Code Insitute.
+- Then I regularly staged my changes using the command `git add <filename>` and then committed the staged changes to my local repository using `git commit -m 'short descriptive message here'`.
+- Finally, I would push the commits from my local repository up to the GitHub repository using the command `git push`.
+- With every push, Github automatically deploys my latest commit from the 'main' branch to the Github pages.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Credits
+- The card icons were created by [Smashicons](https://www.flaticon.com/authors/smashicons) on [Flaticon](https://www.flaticon.com/).
+- The timer and move icons were taken from [FontAwesome](https://fontawesome.com/).
+- The How-to-play animation was recorded with the program [ScreenToGif](https://www.screentogif.com/).
+- The fonts are imported from [Google Fonts](https://fonts.google.com/).
+- The favicon was generated using [favicon.io](https://favicon.io/) with a vector graphic from [Public Domain Vectors](https://publicdomainvectors.org/en/free-clipart/Seasons-icons/76143.html).
+- I learned about the Durstenfeld shuffle algorithm from a post on [Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+- I learned how to create a flip animation with CSS on [W3School](https://www.w3schools.com/howto/howto_css_flip_card.asp)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Acknowledgments
 
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+I would like to acknowledge the following people who have helped me along the way in completing my first milestone project:
+- My husband, Moritz Wach, for his unwavering support, patience, and feedback.
+- My mentor, Spencer Barriball, for his guidance and advise.
+- My fellow students for their company and encouragement. 
