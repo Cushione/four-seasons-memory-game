@@ -120,6 +120,7 @@ Wireframes were created for the mobile and desktop versions of the website with 
 ## Design
 
 ### Colors
+![Colors](assets/docs/colors.png)  
 The website uses a wide range of pastel colors to recreate the feeling of four changing seasons. 
 - Spring has a light pink color that represents fresh, blooming flowers.
 - Summer has a turquoise blue color that evokes the feeling of bathing in the sea.
