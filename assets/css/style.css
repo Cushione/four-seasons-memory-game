@@ -240,7 +240,10 @@ button:hover {
     }
 }
 
-/* Card Styling */
+/* 
+    Card Styling 
+    Learned how to flip cards with css at W3School https://www.w3schools.com/howto/howto_css_flip_card.asp
+*/
 
 .card {
     background-color: transparent;

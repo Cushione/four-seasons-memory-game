@@ -122,7 +122,7 @@ function closeOpenCards() {
     cardsToClose = [];
 }
 
-/** Flip a card and add image corresponding to the value if it is being opened */
+/** Flip a card and add an image corresponding to the value if it is being opened */
 function flipCard(card, value) {
     if (card.classList.contains("flipped")) {
         // Close the card and remove the image afterwards if it is not already opened again
@@ -134,6 +134,7 @@ function flipCard(card, value) {
         }, 1000);
     } else {
         // Add image to the card back and then open it
+        // Icons were created by Smashicons on Flaticon https://www.flaticon.com/authors/smashicons
         card.children[0].children[1].style.setProperty('background-image', `url(assets/images/themes/${selectedSeason}/${value}.png)`);
         card.classList.add("flipped");
     }
