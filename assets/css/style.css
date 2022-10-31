@@ -1,5 +1,7 @@
+/* Google Fonts https://fonts.google.com/ */
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Sniglet&display=swap');
 
+/* General Styling */
 * {
     font-family: "Sniglet", sans-serif;
     font-size: 20px;
@@ -23,6 +25,8 @@ body {
 .hidden {
     display: none !important;
 }
+
+/* Button Styling */
 
 button {
     background: none;
@@ -54,6 +58,8 @@ button:hover {
     box-shadow: rgba(60 64 67 / 30%) 0px 3px 2px 0px, rgba(60 64 67 / 15%) 0px 3px 6px 2px;
 }
 
+/* Menu Styling */
+
 #menu-container {
     text-align: center;
     display: flex;
@@ -80,6 +86,8 @@ button:hover {
     margin: 0 auto;
 }
 
+/* Theme Select Styling */
+
 #theme-buttons div {
     display: grid;
     grid-template-columns: 1fr;
@@ -92,6 +100,8 @@ button:hover {
         padding: 0;
     }
 }
+
+/* How To Play Styling */
 
 #how-to-play>div {
     display: flex;
@@ -120,6 +130,7 @@ button:hover {
     }
 }
 
+/* High Score Styling */
 
 #high-score-list {
     max-width: 350px;
@@ -162,6 +173,8 @@ button:hover {
     font-size: 20px;
 }
 
+/* Game Screen Styling */
+
 #game-container {
     padding: 0 2vmin;
 
@@ -181,10 +194,14 @@ button:hover {
     padding-right: 6px;
 }
 
+/* Quit Button Styling */
+
 #quit-button {
     position: absolute;
     top: 0;
 }
+
+/* Leave Dialog Styling */
 
 #quit-confirm {
     position: absolute;
@@ -208,6 +225,8 @@ button:hover {
     font-size: 1em;
 }
 
+/* Game Board Styling */
+
 #game-board {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -220,6 +239,8 @@ button:hover {
         grid-template-columns: repeat(5, 1fr);
     }
 }
+
+/* Card Styling */
 
 .card {
     background-color: transparent;
@@ -317,6 +338,8 @@ li.winter div {
 .winter .card-back {
     border: 1px solid rgb(217 228 245)
 }
+
+/* Game Result Styling */
 
 #game-result {
     font-size: 1.4rem;
