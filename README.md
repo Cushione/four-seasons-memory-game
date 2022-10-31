@@ -1,6 +1,7 @@
+![Game Name](assets/docs/game-name.png)
 # Four Seasons Memory Game
 
-Four Seasons is a relaxing memory game with changing seasons.
+Four Seasons is a relaxing memory game with changing seasons. 
 
 This website targets people of any age looking for an easy game without complex rules.
 
@@ -42,6 +43,7 @@ This website targets people of any age looking for an easy game without complex 
 - At the bottom of each page, there is a go-back button allowing the user to navigate to the previous page. 
 
 #### Game Name
+![Game Name](assets/docs/game-name.png)
 - The game name is the first element on all pages, excluding the game screen.
 - The name conveys the exact nature of the website, making it clear it is a memory game. 
 - The user can immediately expect a game revolving around four changing seasons. 
@@ -80,7 +82,7 @@ This website targets people of any age looking for an easy game without complex 
 - The game ends when all cards have been matched, revealing the final score. 
 
 #### Game Screen
-![Game Screen](assets/docs/features/game-screen.gif)
+![Game Screen](assets/docs/features/game-screen.png)
 - The game screen presents the user with a game board, timer, and a move counter. 
 - In the top left corner, the user can find a back button that allows him to leave the game.
 - The game board consists of 20 square, evenly spaced cards. The back of the card carries the color of the chosen season.
