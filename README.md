@@ -191,12 +191,12 @@ The live link can be found here: [Four Seasons Memory Game](https://cushione.git
 - The How-to-play animation was recorded with the program [ScreenToGif](https://www.screentogif.com/).
 - The fonts are imported from [Google Fonts](https://fonts.google.com/).
 - The favicon was generated using [favicon.io](https://favicon.io/) with a vector graphic from [Public Domain Vectors](https://publicdomainvectors.org/en/free-clipart/Seasons-icons/76143.html).
-- I learned about the Durstenfeld shuffle algorithm from a post on [Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
-- I learned how to create a flip animation with CSS on [W3School](https://www.w3schools.com/howto/howto_css_flip_card.asp)
+- I learned about the Durstenfeld shuffle algorithm from a post on [Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array).
+- I learned how to create a flip animation with CSS on [W3School](https://www.w3schools.com/howto/howto_css_flip_card.asp).
 
-## Acknowledgments
+## Acknowledgements
 
-I would like to acknowledge the following people who have helped me along the way in completing my first milestone project:
-- My husband, Moritz Wach, for his unwavering support, patience, and feedback.
-- My mentor, Spencer Barriball, for his guidance and advise.
-- My fellow students for their company and encouragement. 
+I would like to acknowledge the following people who have helped me along the way in completing my second portfolio project:
+- My husband, Moritz Wach, for his encouragement, support, and Java script 101 at any given time.
+- My mentor, Spencer Barriball, for being the best mentor one could hope for.
+- My friends and family for playing the game rigorously and offering their generous feedback. 
