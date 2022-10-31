@@ -11,22 +11,27 @@
     <meta name="author" content="Kristyna Maulerova">
 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- FontAwesome Icons https://fontawesome.com/ -->
     <script src="https://kit.fontawesome.com/bff7419e74.js" crossorigin="anonymous" defer></script>
     <title>Four Seasons Memory Game</title>
 </head>
 
 <body>
+    <!-- Game Menu -->
     <div class="container" id="menu-container">
         <div id="game-name">
             <h1>FOUR SEASONS</h1>
             <h2>Memory Game</h2>
         </div>
+        <!-- Main Menu -->
         <div id="menu-buttons">
             <button onclick="selectTheme()">New Game</button>
             <button onclick="showHowToPlay()">How to Play</button>
             <button onclick="showHighScoreList()">High Score</button>
         </div>
+        <!-- Theme Select -->
         <div id="theme-buttons" class="hidden">
             <div>
                 <button class="spring-button" onclick="newGame('spring')">Spring</button>
@@ -36,13 +41,14 @@
             </div>
             <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
         </div>
+        <!-- How To Play -->
         <div id="how-to-play" class="hidden">
             <div>
                 <div>
                     <p>There are 20 cards with 10 pairs of unique pictures.</p>
                     <p>The game starts with all the cards face down.</p>
                     <p>With each move, you turn over two cards of your choice.</p>
-                    <p>If they have the same picture, it's a match and they stay open.
+                    <p>If they have the same picture, it's a match, and they stay open.
                         Otherwise, the cards are turned face down again.</p>
                     <p>The game ends when all the cards have been matched.</p>
                 </div>
@@ -50,11 +56,13 @@
             </div>
             <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
         </div>
+        <!-- High Score -->
         <div id="high-score-menu" class="hidden">
             <ol id="high-score-list"></ol>
             <p id="empty-high-score" class="hidden">There are no high scores yet.</p>
             <button class="secondary-button" onclick="showMainMenu()"><i class="fa-solid fa-left-long"></i></button>
         </div>
+        <!-- Game Result -->
         <div id="game-result" class="hidden">
             <h3>Well Done!</h3>
             <p>You finished the game</p>
@@ -64,14 +72,21 @@
             <button onclick="showMainMenu()">Main Menu</button>
         </div>
     </div>
+    <!-- Game Screen -->
     <div class="container hidden" id="game-container">
+        <!-- Quit Button -->
         <button id="quit-button" class="secondary-button small-button" onclick="confirmQuit()"><i
                 class="fa-solid fa-left-long"></i></button>
+        <!-- Game Header -->
         <div id="game-header">
             <p><i class="fa-solid fa-stopwatch"></i><span id="game-timer">0</span></p>
             <p><i class="fa-solid fa-circle-right"></i><span id="game-moves">0</span></p>
         </div>
-        <div id="game-board"></div>
+        <!-- Game Board -->
+        <div id="game-board">
+            <!-- Card added through JS -->
+        </div>
+        <!-- Leave Dialog -->
         <div id="quit-confirm" class="hidden">
             <p>Are you sure you want to leave this game?</p>
             <div>
@@ -80,6 +95,7 @@
             </div>
         </div>
     </div>
+    <!-- Javascript -->
     <script src="assets/js/main.js"></script>
 </body>
 
